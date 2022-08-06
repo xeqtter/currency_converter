@@ -27,10 +27,6 @@ app.get('/', async (req, res) => {
     res.json(message);
 });
 
-// convertCurrency('USD', 'CHF', 20)
-//   .then((data) => console.log(data))
-//   .catch((error) => console.log(error));
-
 app.listen((5555), () => {
     console.log('Server is listening on port 5555');
 
