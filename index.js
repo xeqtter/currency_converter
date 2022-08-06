@@ -22,6 +22,7 @@ const convertCurrency = async (fromCurrency, toCurrency, amount) => {
 
 app.get('/', async (req, res) => {
     const { fromCurrency, toCurrency, amount } = req.query;
+    
     if(!fromCurrency || !toCurrency || !amount) {
       res.send('Please provide all the required parameters');
     } else {
@@ -33,5 +34,4 @@ app.get('/', async (req, res) => {
 
 app.listen((process.env.PORT), () => {
     console.log('Server is listening on port 5555');
-
 });
