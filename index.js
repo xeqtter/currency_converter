@@ -30,7 +30,7 @@ app.get('/', async (req, res) => {
 //   .then((data) => console.log(data))
 //   .catch((error) => console.log(error));
 
-app.listen((5000), () => {
-    console.log('Server is listening on port 5000');
+app.listen((5555), () => {
+    console.log('Server is listening on port 5555');
 
 });
