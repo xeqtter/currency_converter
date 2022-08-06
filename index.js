@@ -21,9 +21,10 @@ const convertCurrency = async (fromCurrency, toCurrency, amount) => {
 };
 
 app.get('/', async (req, res) => {
-    const message = await convertCurrency('USD', 'CHF', 20);
+    const { fromCurrency, toCurrency, amount } = req.query;
+    const message = await convertCurrency(fromCurrency, toCurrency, amount);
 
-    res.send(message);
+    res.json(message);
 });
 
 // convertCurrency('USD', 'CHF', 20)
